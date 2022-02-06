@@ -1,30 +1,29 @@
-import math
-import os
-import random
-import re
-import sys
+# import math
+# import os
+# import random
+# import re
+# import sys
 
-class SinglyLinkedListNode:
-    def __init__(self, node_data):
-        self.data = node_data
-        self.next = None
+# class SinglyLinkedListNode:
+#     def __init__(self, node_data):
+#         self.data = node_data
+#         self.next = None
 
-class SinglyLinkedList:
-    def __init__(self):
-        self.head = None
-        self.tail = None
+# class SinglyLinkedList:
+#     def __init__(self):
+#         self.head = None
+#         self.tail = None
 
-def print_singly_linked_list(node, sep, fptr):
-    while node:
-        fptr.write(str(node.data))
+# def print_singly_linked_list(node, sep, fptr):
+#     while node:
+#         fptr.write(str(node.data))
 
-        node = node.next
+#         node = node.next
 
-        if node:
-            fptr.write(sep)
+#         if node:
+#             fptr.write(sep)
             
 def insertNodeAtHead(llist, data):
-    # Write your code here
     node = SinglyLinkedListNode(data)
     head = llist
     if not head:
@@ -33,19 +32,19 @@ def insertNodeAtHead(llist, data):
         node.next = head
         head = node
     return head
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+# if __name__ == '__main__':
+#     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    llist_count = int(input())
+#     llist_count = int(input())
 
-    llist = SinglyLinkedList()
+#     llist = SinglyLinkedList()
 
-    for _ in range(llist_count):
-        llist_item = int(input())
-        llist_head = insertNodeAtHead(llist.head, llist_item)
-        llist.head = llist_head
+#     for _ in range(llist_count):
+#         llist_item = int(input())
+#         llist_head = insertNodeAtHead(llist.head, llist_item)
+#         llist.head = llist_head
     
-    print_singly_linked_list(llist.head, '\n', fptr)
-    fptr.write('\n')
+#     print_singly_linked_list(llist.head, '\n', fptr)
+#     fptr.write('\n')
     
-    fptr.close()
+#     fptr.close()
